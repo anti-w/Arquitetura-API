@@ -7,7 +7,7 @@ import { getAnimes } from "../../services/getAnimes";
 
 import "../../index.css";
 
-function Animes() {
+const Animes = () => {
   const [animes, setAnimes] = useState([{}]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -29,6 +29,6 @@ function Animes() {
       </div>
     </div>
   );
-}
+};
 
 export default Animes;

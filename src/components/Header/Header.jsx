@@ -1,8 +1,8 @@
 import { useState } from "react";
-import logo from "../../assets/Myanimelist_logo.webp";
+import logo from "../../images/Myanimelist_logo.webp";
 import { searchAnimeByName } from "../../services/searchAnimeByName";
 
-export const Header = ({ setAnimes }) => {
+const Header = ({ setAnimes }) => {
   const [name, setName] = useState("");
 
   const handleSubmit = async () => {
@@ -31,3 +31,5 @@ export const Header = ({ setAnimes }) => {
     </header>
   );
 };
+
+export default Header;

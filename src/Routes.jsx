@@ -1,18 +1,16 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Animes from "./views/Animes";
-import Home from "./views/Home";
+import { Routes as Switch, BrowserRouter, Route } from "react-router-dom";
+import { Animes } from "./views";
+import { Home } from "./views";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Animes />,
-  },
-  {
-    path: "/animes",
-    element: <Animes />,
-  },
-]);
-
-export const Routes = () => {
-  return <RouterProvider router={router} />;
+const Routes = () => {
+  return (
+    <BrowserRouter>
+      <Switch>
+        <Route path="/home" element={<Home />} />
+        <Route path="/animes" element={<Animes />} />
+      </Switch>
+    </BrowserRouter>
+  );
 };
+
+export default Routes;
