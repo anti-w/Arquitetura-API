@@ -5,7 +5,7 @@ import Home from "./views/Home";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: <Animes />,
   },
   {
     path: "/animes",
