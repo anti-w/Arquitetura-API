@@ -5,10 +5,8 @@ import { searchAnimeByName } from "../../services/searchAnimeByName";
 const Header = ({ setAnimes }) => {
   const [name, setName] = useState("");
 
-  const handleSubmit = async () => {
-    const { data } = await searchAnimeByName(name);
-
-    setAnimes(data);
+  const handleSubmit = () => {
+    setAnimes(name);
   };
   return (
     <header className="flex w-full justify-between p-6">
