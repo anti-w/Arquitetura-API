@@ -1,13 +1,12 @@
 import { Routes as Switch, BrowserRouter, Route } from "react-router-dom";
-import { Animes } from "./views";
-import { Home } from "./views";
+import { Animes, AnimeCharacters } from "./views";
 
 const Routes = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/home" element={<Home />} />
-        <Route path="/animes" element={<Animes />} />
+        <Route path="/" element={<Animes />} />
+        <Route path="/:id/characters" element={<AnimeCharacters />} />
       </Switch>
     </BrowserRouter>
   );

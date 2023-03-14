@@ -1,2 +1,2 @@
-export { Home } from "./Home";
+export { AnimeCharacters } from "./AnimeCharacters";
 export { Animes } from "./Animes";
