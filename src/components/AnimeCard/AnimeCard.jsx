@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const AnimeCard = ({
   title,
   urlCover,
@@ -21,6 +23,7 @@ const AnimeCard = ({
         <span>{genre.name}</span>
       ))}
       <p>{status}</p>
+      <Link to={`/${id}/characters`}> Teste</Link>
     </div>
   );
 };

@@ -5,11 +5,11 @@ const AnimesList = ({ animes, isLoading }) => {
 
   return animes.map((anime) => (
     <AnimeCard
-      id={anime.mail_id}
+      id={anime.mal_id}
       title={anime.title_english ? anime.title_english : anime.title}
       urlCover={anime.images.jpg.image_url}
       urlVisit={anime.url}
-      key={anime.mail_id}
+      key={anime.mal_id}
       score={anime.score}
       genres={anime.genres}
       status={anime.status}

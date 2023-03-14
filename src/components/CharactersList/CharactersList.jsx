@@ -1,4 +1,4 @@
-import CharacterCard from "../CharacterCard";
+import { CharacterCard } from "../CharacterCard";
 
 const CharactersList = ({ characters, isLoading }) => {
   if (isLoading) return <h1>Carregando</h1>;
@@ -6,8 +6,8 @@ const CharactersList = ({ characters, isLoading }) => {
   return characters.map((character, i) => (
     <CharacterCard
       key={i}
-      name={character.name}
-      coverUrl={character.images.webp}
+      name={character.character.name}
+      coverUrl={character.character.images.webp.image_url}
       role={character.role}
     />
   ));
