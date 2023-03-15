@@ -1,12 +1,15 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
-import { AnimesList } from "../../components/AnimesList";
-import { Header } from "../../components/Header";
+import {
+  ContainerWithBackground,
+  GridFourCols,
+  AnimesList,
+  Header,
+} from "../../components";
 
-import { getAnimes } from "../../services/getAnimes";
+import { useFetch } from "../../hooks/useFetch";
 
 import "../../index.css";
-import { useFetch } from "../../hooks/useFetch";
 
 const Animes = () => {
   const [animesSearch, setAnimesSearch] = useState([{}]);
@@ -21,13 +24,14 @@ const Animes = () => {
   );
 
   return (
-    <div className="min-h-screen bg-zinc-900 text-white p-4">
-      <Header setAnimes={setAnimesSearch} />
-
-      <div className="grid grid-cols-4 place-items-stretch">
-        <AnimesList animes={fetchedData} isLoading={isLoading} />
-      </div>
-    </div>
+    <>
+      <ContainerWithBackground>
+        <Header setAnimes={setAnimesSearch} />
+        <GridFourCols>
+          <AnimesList animes={fetchedData} isLoading={isLoading} />
+        </GridFourCols>
+      </ContainerWithBackground>
+    </>
   );
 };
 
