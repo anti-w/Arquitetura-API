@@ -1,6 +1,5 @@
 import { useState } from "react";
 import logo from "../../images/Myanimelist_logo.webp";
-import { searchAnimeByName } from "../../services/searchAnimeByName";
 
 const Header = ({ setAnimes }) => {
   const [name, setName] = useState("");
@@ -9,7 +8,7 @@ const Header = ({ setAnimes }) => {
     setAnimes(name);
   };
   return (
-    <header className="flex w-full justify-between p-6">
+    <header className="flex w-full justify-between p-6 mb-10">
       <img src={logo} className="w-1/6" />
       <div className="flex justify-center items-center gap-2">
         <input
@@ -17,7 +16,7 @@ const Header = ({ setAnimes }) => {
           placeholder="Digite o nome de um anime"
           onChange={(event) => setName(event.target.value)}
           value={name}
-          className="text-black p-2 rounded"
+          className="text-black p-2 w-[400px] rounded"
         />
         <button type="submit" onClick={handleSubmit}>
           <img
